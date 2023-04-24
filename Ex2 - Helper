@@ -1,0 +1,19 @@
+({
+ getAccQ : function(component) {
+
+  let action = component.get("c.getAcc");
+   
+        action.setCallback(this, function(response){
+     
+          let state = response.getState();
+            console.log(state);
+            
+            if(state == "SUCCESS"){
+                component.set("v.accAura", response.getReturnValue());
+                console.log(response.getReturnValue());                     
+        }
+                           
+ });
+        $A.enqueueAction(action);
+    }
+})
