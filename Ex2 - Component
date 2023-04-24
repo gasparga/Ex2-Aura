@@ -1,0 +1,21 @@
+<aura:component controller="oppC" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <aura:attribute name="opps" type="opportunity[]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+                  
+    <lightning:card iconName="standard:opportunity" title="Oportunidades em negociação">
+        
+        <div class="slds-p-arround-medium">
+        	Lista de Oportunidades
+            <aura:iteration items="{!v.opps}" var="opportunity">
+            <p>----------------</p>
+             <p>{!opportunity.name}</p>
+             <p>{!opportunity.Amount}</p>
+             <p>{!opportunity.StageName}</p>
+             <p>{!opportunity.CloseDate}</p>
+                
+            </aura:iteration>
+        </div>
+    </lightning:card>
+</aura:component>
