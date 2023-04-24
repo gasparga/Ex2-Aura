@@ -1,0 +1,14 @@
+.THIS.divRec {
+    font-family: FreeMono, monospace;
+    font-size: 18px;
+    background-color: white;
+    width:150%;
+    color:black;
+}
+.THIS.tit{
+    width:150%;
+    background-color: white;
+    font-family: FreeMono, monospace;
+    font-size: 18px;
+    font-style: oblique;
+}
