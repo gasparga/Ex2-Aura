@@ -1,0 +1,7 @@
+public class accQ {
+    @AuraEnabled
+    public static List<account> getAcc(){
+        return[Select Name, Contato__c, Rating From Account Where Rating = 'Hot'];
+        
+    }
+}
