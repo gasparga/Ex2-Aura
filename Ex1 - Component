@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    
+      <h1 class="tit">LEAD RAPIDEZ</h1>
+    
+<div class="divRec">
+
+    <lightning:recordEditForm aura:id="recordEditForm"
+                           objectApiName="Lead"
+                           onsuccess="{!c.showToast}">
+        <lightning:messages />
+        <lightning:inputField fieldName="Name" id="name"/>
+        <lightning:inputField fieldName="Company" id="empresa"/>
+        
+       <center>
+            <lightning:button label="Cancel" type="submit" onclick="{!c.handleReset}" />
+           <lightning:button class="slds-m-top_small" type="submit" label="Create new" />
+        </center>	
+    </lightning:recordEditForm>
+      </div>
+ 
+</aura:component>
