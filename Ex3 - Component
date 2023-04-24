@@ -1,0 +1,19 @@
+<aura:component controller="accQ" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="accAura" type="Account[]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    
+    <lightning:card iconName="standard:account" title="Conta em Negociação"/>
+    
+     <div class="slds-p-arround-medium">
+            <aura:iteration items="{!v.accAura}" var="account">
+            <p>----------------</p>
+             <p>{!account.Name}</p>
+             <p>{!account.Contato__c}</p>
+             <p>{!account.Rating}</p>
+                
+            </aura:iteration>
+        </div>
+    
+</aura:component>
