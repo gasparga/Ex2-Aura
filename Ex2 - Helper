@@ -1,0 +1,19 @@
+({
+ getOppN : function(component) {
+
+  let action = component.get("c.getOpp");
+   
+        action.setCallback(this, function(response){
+     
+          let state = response.getState();
+            console.log(state);
+            
+            if(state == "SUCCESS"){
+                component.set("v.opps", response.getReturnValue());
+                console.log(response.getReturnValue());                   
+        }
+                           
+ });
+        $A.enqueueAction(action);
+    }
+})
